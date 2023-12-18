@@ -1,0 +1,267 @@
+:root {
+  --maincolor: #20c997;
+  scroll-behavior: auto;
+}
+#home {
+  background-image: url("../images/home.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+}
+.overlayer {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.navbar-brand,
+.nav-item .nav-link {
+  color: #fff;
+}
+.nav-item .nav-link:hover {
+  color: var(--maincolor);
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  background-color: var(--maincolor);
+  transition: width 0.5s;
+}
+.nav-link:hover::after {
+  width: 40px;
+}
+#home .home-content {
+  color: #fff;
+}
+#home .home-content h1 {
+  padding: 10px 0;
+  font-weight: bold;
+}
+#about .about-head h2,
+#services .services-head h2,
+#Resume .Resume-head h2,
+#portfolio .portfolio-head h2,
+#client .client-head h2,
+#contact .contact-head h2 {
+  font-size: 100px;
+  color: #f1f1f1;
+  position: relative;
+}
+
+#about .about-head h2::after,
+#services .services-head h2::after,
+#portfolio .portfolio-head h2::after,
+#client .client-head h2::after,
+#contact .contact-head h2::after,
+#Resume .Resume-head h2::after {
+  content: "";
+  width: 20%;
+  height: 3px;
+  background-color: var(--maincolor);
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+}
+#about h2 span {
+  color: var(--maincolor);
+}
+#about .count {
+  font-weight: bold;
+  font-size: 40px;
+  color: gray;
+}
+
+.slider-btn {
+  position: absolute;
+  bottom: -60px;
+}
+.carousel-indicators [data-bs-target] {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--maincolor);
+}
+
+.Resume .Resume-content p {
+}
+
+.progress .bg {
+  background-color: var(--maincolor);
+}
+
+footer .container span {
+  transition: color 0.5s;
+}
+footer .container span:hover {
+  color: var(--maincolor);
+}
+
+footer .Copyright,
+#contact .icons,
+#Resume .icons,
+#services .icons
+{
+  color: var(--maincolor);
+}
+#contact .btn,
+#about .btn,
+#home .btn{
+  background-color: var(--maincolor);
+}
+/* ************************************************************************ */
+
+.navbar{
+  transition: all 2s;
+}
+.icon{
+  z-index: 5;
+  cursor: pointer;
+  display: none;
+}
+.settings{
+  width: 25%;
+  height: 250px;
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 6;
+  display: flex;
+  align-items: flex-start;
+}
+.setting-inner{
+  width: 80%;
+  height: 100%;
+  background-color: #222;
+}
+.box{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.boxbg{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.setting-icon{
+  width: 20%;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #222;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius:15px ;
+
+}
+
+.circle{
+  color: var(--maincolor);
+}
+
+.landing{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8888888888888;
+  background-color: #222222ad;
+  display: flex;
+}
+.loader {
+  --cell-size: 52px;
+  --cell-spacing: 1px;
+  --cells: 3;
+  --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--total-size);
+  height: var(--total-size);
+}
+
+.cell {
+  flex: 0 0 var(--cell-size);
+  margin: var(--cell-spacing);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+  animation: 1.5s ripple ease infinite;
+}
+
+.cell.d-1 {
+  animation-delay: 100ms;
+}
+
+.cell.d-2 {
+  animation-delay: 200ms;
+}
+
+.cell.d-3 {
+  animation-delay: 300ms;
+}
+
+.cell.d-4 {
+  animation-delay: 400ms;
+}
+
+.cell:nth-child(1) {
+  --cell-color: #00FF87;
+}
+
+.cell:nth-child(2) {
+  --cell-color: #0CFD95;
+}
+
+.cell:nth-child(3) {
+  --cell-color: #17FBA2;
+}
+
+.cell:nth-child(4) {
+  --cell-color: #23F9B2;
+}
+
+.cell:nth-child(5) {
+  --cell-color: #30F7C3;
+}
+
+.cell:nth-child(6) {
+  --cell-color: #3DF5D4;
+}
+
+.cell:nth-child(7) {
+  --cell-color: #45F4DE;
+}
+
+.cell:nth-child(8) {
+  --cell-color: #53F1F0;
+}
+
+.cell:nth-child(9) {
+  --cell-color: #60EFFF;
+}
+
+/*Animation*/
+@keyframes ripple {
+  0% {
+    background-color: transparent;
+  }
+
+  30% {
+    background-color: var(--cell-color);
+  }
+
+  60% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
